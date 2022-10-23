@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    text-decoration: none;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+body {
+    font-family: 'Epilogue', sans-serif;
+    max-height: 195vw;
+}
+.wrapper{
+    overflow: hidden;
+    position: relative
+}
+/* WRAPPER MENU SEKCJI MOBILNEJ */
+header.mobile-header {
+    display:flex;
+    justify-content: space-between;
+    padding: 6.5vw;
+    padding-bottom: 6vw;
+    padding-left: 5vw;
+    padding-right: 3.6vw;
+}
+.desktop-header {
+    display:none;
+}
+/* PRZYCISK ORAZ LOGO DLA SEKCJI MOBILNEJ */
+.mobile-logo{
+    width: 22vw;
+    height:7vw;
+}
+.menubutton{
+    width: 8vw;
+    height: 4vw;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+}
+.menubutton img{
+    width: 8vw;
+    height: 4vw;
+
+}
+.menubutton:hover{
+transform: rotate(90deg);
+transform-origin: center;
+}
+/* OBRAZ DLA SEKCJI MOBILNEJ */
+.mobile-img {
+height: 75vw;
+width: 100vw;
+position:relative;
+z-index: -1;
+}
+/* OBRAZ DLA SEKCJI DEKSTOP */
+.desktop-img{
+    display:none;
+}
+/*WRAPPER CONTENTU TEKST - BUTTON - LOGOS*/
+.wrapper-text-button-logos {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* H1 DLA SEKCJI MOBILNEJ */
+.slogan h1{
+    padding-top: 12vw;
+    text-align: center;
+    font-size: 9.5vw;
+}
+/* P DLA SEKCJI MOBILNEJ */
+.text p{
+    text-align: center;
+    padding: 5vw;
+    line-height: 7vw;
+    font-size: 4.3vw;
+}
+/* PRZYCISK DLA SEKCJI MOBILNEJ */
+.learn-more{
+    margin: 2vw;
+width: 37vw;
+height: 13vw;
+border: none;
+background-color: hsl(0, 0%, 8%);
+border-radius: 4vw;
+font-size: 4.6vw;
+font-weight: 700;
+cursor: pointer;
+color: hsl(0, 0%, 98%);
+}
+/*SEKCJA DOLNYCH LOGO*/
+.bottom-logos {
+    display:flex;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 9vw;
+}
+.bottom-logos img{
+    transform: scale(80%);
+    width:80%;
+    height: auto;
+z-index: -1;
+margin-bottom: 10vw;
+}
+/*MENU BOCZNE DLA URZADZEN MOBILNYCH*/
+.sidemenu{
+    position:absolute;
+    background-color: hsl(0, 0%, 98%);
+    top: 0vw;
+    right: 0vw;
+    height: 195vw;
+    width: 64vw;
+    transform: translateX(100%);
+    transition: 0.2s linear;
+}
+.menu-option {
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+/* LISTA MENU KTORA SIE ROZWIJA*/
+.submenu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.submenu ul{
+    list-style: none;
+    padding-left: 1vw;    
+}
+.submenu li{
+    font-size: 4.3vw;
+    margin: 5.9vw;
+    cursor: pointer;
+}
+.submenu ul li img{
+    margin-right: 4.1vw;
+    width: 4.5vw;
+    height: 5vw;
+}
+.submenu li:last-child{
+    margin-bottom: 1.3vw;
+}
+.menu-list-wrapper {
+    margin-top: -3vw;
+    padding: 1vw;
+}
+/* PRZYCISKI GLOWNE LISTY */
+.menu-container {
+    font-size: 4.3vw;
+    color: hsl(0, 0%, 41%);
+    padding: 2vw;
+    margin: 3vw;
+}
+/* STRZALKA PRZY ELEMENCIE LISTY*/
+.arrow {
+    margin-left: 4.5vw;
+    height: 1.7vw;
+    width: 2.5vw;
+    transition: 0.2s linear;
+}
+.menu-container:hover .arrow{
+transform: rotate(90deg);
+}
+.menu-container.active .arrow{
+    transform: rotate(180deg);
+}
+/* KLASA ACTIVE DODAWANA PRZEZ JS*/
+.menu-container.active .submenu {
+    max-height: 50vw;
+    animation: fade 1s ease-in-out;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+/* PRZYCISK DO ZAMYKANIA CALEGO MENU*/
+.menubutton-close {
+    position: relative;
+    width: 6vw;
+    height: 6vw;
+    margin: 6vw;
+    left: 46vw;
+}
+.closeBtn{
+    width: 100%;
+    height: 100%;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+.closeBtn:hover{
+    transform: scale(80%);
+    transform-origin: center;
+}
+/* OPACITY STRONY PODCZAS WYSUWANIA SIDEMENU*/
+.opacity {
+    display:none;
+    position:absolute;
+    width: 100%;
+    height: 195vw;
+    background-color: hsla(200, 100%, 0%, .7);
+    animation: fadeIn 0.4s forwards;
+    
+}
+
+@keyframes fadeIn {
+        0% {opacity: 0}
+        100% {opacity: 1}}
+/* SEKCJA PRZYCISKOW W SIDE MENU */
+.side-menu-buttons-wrapper{
+    display:flex;
+    flex-direction: column;
+    /* justify-content:flex-start; */
+    align-items: center;
+}
+
+.login-sidemenu {
+    margin: 2vw;
+    width: 20vw;
+    height: 7vw;
+    border: none;
+    font-size: 4.1vw;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 98%) ;
+    color: hsl(0, 0%, 41%);
+}
+.register-sidemenu {
+    margin: 2vw;
+    width: 53vw;
+    height: 11vw;
+    border: none;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 4vw;
+    font-weight: 600;
+    font-size: 4.1vw;
+    cursor: pointer;
+    border: 2px solid hsl(0, 0%, 41%);
+    color: hsl(0, 0%, 41%);
+}
+
+
+/*SEKCJA DLA URZADZEN DESKTOP!!!*/
+
+
+@media (min-width: 992px){
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+    body {
+        font-family: 'Epilogue', sans-serif;
+        max-height: 195vw;
+    }
+    .wrapper{
+        position: relative
+    }
+    .wrapper-content{
+        display:flex;
+        flex-direction: row;
+    }
+    /*WRAPPER SEKCJI GORNEGO MENU*/
+    .desktop-header{
+        padding: 1.5vw;
+        padding-left: 2.7vw;
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        justify-content:flex-start;
+    }
+    /*WRAPPER SEKCJI MENU*/
+    .menu-list-wrapper-desktop{
+        display:flex;
+        position:relative;
+        color: hsl(0, 0%, 41%);
+        font-size: 1vw;
+        left: 3vw;
+        justify-content: space-between;
+        width: 26.5vw;
+        height: 1vw;
+    }
+    /* STRZALKA PRZY LISCIE MENU */
+    .arrow-desktop{
+        margin-left: 0.5vw;
+        width: 0.7vw;
+        height: 0.4vw;
+        transition: 0.2s linear;
+    }
+    /* LOGO STRONY*/
+    .desktop-logo {
+        width: 6vw;
+    }
+    /* WRAPPER  MOBILNY MENU SEKCJI DESKTOP */
+    header.mobile-header {
+        display: none;
+    }
+    .menu-option-desktop {
+        cursor:pointer;
+        display: flex;
+        align-items: center;
+        transition: .2s linear;
+    }
+    .menu-option-desktop:hover{
+        color: black;
+    }
+    /*POZYCJA ELEMENTU LISTY*/
+    .submenu-desktop{
+        width: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+    }
+    .submenu-desktop ul{
+        list-style: none;
+        padding-left: 0.9vw;
+        padding-top: 0.9vw   
+    }
+    .submenu-desktop li{
+        font-size: 1vw;
+        padding: 0.3vw;
+        margin: 0.5vw;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    .submenu-desktop li:hover{
+        color: black;
+    }
+    .submenu-desktop ul li img{
+        margin-right: 1vw;
+        width: 1vw;
+        height: 1vw;
+    }
+    .menu-container-desktop.active:first-of-type .submenu-desktop {
+        position: absolute;
+        top: 2.3vw;
+        right: 20.8vw;
+        width: 10.4vw;
+        height: 11.2vw;
+        border-radius: 1vw;
+        max-height: 50vw;
+        animation: fade 1s linear;
+        -webkit-box-shadow: 0px 0px 27px -12px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 0px 27px -12px rgba(66, 68, 90, 1);
+box-shadow: 0px 0px 27px -12px rgba(66, 68, 90, 1);
+    }
+    .menu-container-desktop.active:nth-of-type(2) .submenu-desktop{
+        position: absolute;
+        border-radius: 1vw;
+        top: 2.3vw;
+        width: 8vw;
+        height: 8.7vw;
+        max-height: 50vw;
+        animation: fade 1s ease-in-out;
+        -webkit-box-shadow: 0px 0px 27px -12px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 0px 27px -12px rgba(66, 68, 90, 1);
+box-shadow: 0px 0px 27px -12px rgba(66, 68, 90, 1);
+    }
+    /*STRZALKA PRZY AKTYWNYM ELEMENCIE*/
+
+    .menu-container-desktop.active .arrow-desktop{
+        transform: rotate(180deg);
+    }
+    .menu-container-desktop:hover .arrow-desktop{
+        transform: rotate(90deg);
+        }
+    /* WRAPPER PRZYCISKOW LOGIN I REGISTER */
+    .side-menu-buttons-wrapper-desktop {
+        position:relative;
+        left: 45.2vw;
+        right: 10vw;
+        width: 16.7vw;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /*PRZYCISKI LOGIN ORAZ REGISTER*/
+    .login-sidemenu-desktop {
+        margin: 0vw;
+        width: 1vw;
+        height: 1vw;
+        border: none;
+        font-size: 1vw;
+        cursor: pointer;
+        background-color: hsl(0, 0%, 98%) ;
+        color: hsl(0, 0%, 41%);
+        transition: .2s linear;
+    }
+    .login-sidemenu-desktop:hover{
+        color: black;
+    }
+    .register-sidemenu-desktop {
+        margin: 0vw;
+        width: 7vw;
+        height: 3vw;
+        border: none;
+        background-color: white;
+        border-radius: 0.8vw;
+        font-weight: 400;
+        font-size: 1.1vw;
+        cursor: pointer;
+        border: 2px solid hsl(0, 0%, 41%);
+        color: hsl(0, 0%, 41%);
+        transition: .2s linear;
+    }
+    .register-sidemenu-desktop:hover {
+color: black;
+border: 2px solid black;
+    }
+    /* OBRAZ MOBILNY DLA SEKCJI DESKTOP */
+    .mobile-img {
+display:none
+    }
+    /* OBRAZ DLA SEKCJI DEKSTOP */
+    .desktop-img{
+        display:block;
+        height: 44vw;
+        width: 34vw;
+        padding-top: 3vw;
+        padding-right: 9vw;
+        order: 1
+    }
+    /*WRAPPER CONTENTU TEKST - BUTTON - LOGOS*/
+    .wrapper-text-button-logos {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 7.3vw;
+        padding-left: 11vw;
+        padding-right: 10.1vw;
+    }
+    /* H1 DLA SEKCJI DESKTOP  */
+    .slogan h1{
+        display:block;
+        width: 37vw;
+        padding-top: 2.5vw;
+        text-align: left;
+        font-size: 5.6vw;
+    }
+    /* P DLA SEKCJI DESKTOP */
+    .text p{
+        text-align: left;
+        padding: 0vw;
+        padding-right: 5.4vw;
+        margin-top: 3vw;
+        line-height: 2vw;
+        font-size: 1.3vw;
+    }
+    /* PRZYCISK DLA SEKCJI DESKTOP  */
+    .learn-more{
+    align-self: flex-start;
+    margin: 0vw;
+    margin-left: 0.3vw;
+    margin-top: 3.8vw;
+    width: 11.5vw;
+    height: 4vw;
+    border: none;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 1.2vw;
+    font-size: 1.3vw;
+    font-weight: 700;
+    cursor: pointer;
+    color: hsl(0, 0%, 98%);
+    transition: .2s linear;
+    }
+    .learn-more:hover{
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+    }
+    /*SEKCJA DOLNYCH LOGO*/
+    .bottom-logos {
+        display:flex;
+        align-self: flex-start;
+        width: 35vw;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6.4vw;
+    }
+    .bottom-logos img{
+
+    width:100%;
+    height: auto;
+    z-index: -1;
+    margin-bottom: 15vw;
+    }
+    /*MENU BOCZNE DLA DESKTOP*/
+    .sidemenu{
+        display:none;
+    }
+    
+}

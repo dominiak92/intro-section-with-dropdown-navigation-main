@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="opacity"></div>
+    <div class="wrapper">
+      <header class="mobile-header">
+        <a href="#"><img class="mobile-logo" src="images/logo.svg" alt="logo" /></a>
+        <div class="menubutton">
+          <img src="images/icon-menu.svg" alt="menu button" />
+        </div>
+      </header>
+      <header class="desktop-header">
+        <a href="#"><img class="desktop-logo" src="images/logo.svg" alt="logo" /></a>
+        <section class="menu-list-wrapper-desktop">
+          <div class="menu-container-desktop">
+            <div class="menu-option-desktop">
+              <p>Features</p>
+              <img class="arrow-desktop" src="images/icon-arrow-down.svg" />
+            </div>
+            <div class="submenu-desktop">
+              <ul>
+                <li><img src="images/icon-todo.svg" />Todo List</li>
+                <li><img src="images/icon-calendar.svg" />Calendar</li>
+                <li><img src="images/icon-reminders.svg" />Reminders</li>
+                <li><img src="images/icon-planning.svg" />Planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-container-desktop">
+            <div class="menu-option-desktop">
+              <p>Company</p>
+              <img class="arrow-desktop" src="images/icon-arrow-down.svg" />
+            </div>
+            <div class="submenu-desktop">
+              <ul>
+                <li><a href="#">History</a></li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-container-desktop">
+            <div class="menu-option-desktop">
+              <p>Carrers</p>
+            </div>
+          </div>
+          <div class="menu-container-desktop">
+            <div class="menu-option-desktop">
+              <p>About</p>
+            </div>
+          </div>
+        </section>
+        <div class="side-menu-buttons-wrapper-desktop">
+          <button class="login-sidemenu-desktop">Login</button>
+          <button class="register-sidemenu-desktop">Register</button>
+        </div>
+      </header>
+      <div class="wrapper-content">
+        <img class="mobile-img" src="images/image-hero-mobile.png" alt="" />
+        <img class="desktop-img" src="images/image-hero-desktop.png" alt="" />
+        <div class="wrapper-text-button-logos">
+          <div class="slogan">
+            <h1>Make remote work</h1>
+          </div>
+          <div class="text">
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
+          <button class="learn-more">Learn more</button>
+          <section class="bottom-logos">
+            <img src="images/client-databiz.svg" alt="" />
+            <img src="images/client-audiophile.svg" alt="" />
+            <img src="images/client-meet.svg" alt="" />
+            <img src="images/client-maker.svg" alt="" />
+          </section>
+        </div>
+      </div>
+      <div class="sidemenu">
+        <div class="menubutton-close">
+          <img class="closeBtn" src="images/icon-close-menu.svg" alt="" />
+        </div>
+        <section class="menu-list-wrapper">
+          <div class="menu-container">
+            <div class="menu-option">
+              <p>Features</p>
+              <img class="arrow" src="images/icon-arrow-down.svg" />
+            </div>
+            <div class="submenu">
+              <ul>
+                <li><img src="images/icon-todo.svg" />Todo List</li>
+                <li><img src="images/icon-calendar.svg" />Calendar</li>
+                <li><img src="images/icon-reminders.svg" />Reminders</li>
+                <li><img src="images/icon-planning.svg" />Planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-container">
+            <div class="menu-option">
+              <p>Company</p>
+              <img class="arrow" src="images/icon-arrow-down.svg" />
+            </div>
+            <div class="submenu">
+              <ul>
+                <li><a href="#">History</a></li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-container">
+            <div class="menu-option">
+              <p>Carrers</p>
+            </div>
+          </div>
+          <div class="menu-container">
+            <div class="menu-option">
+              <p>About</p>
+            </div>
+          </div>
+        </section>
+        <div class="side-menu-buttons-wrapper">
+          <button class="login-sidemenu">Login</button>
+          <button class="register-sidemenu">Register</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
